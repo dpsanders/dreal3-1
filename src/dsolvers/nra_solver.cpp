@@ -472,7 +472,7 @@ bool nra_solver::check(bool complete) {
                 assert(c->get_enodes().size() == 1);
                 linear_stack.emplace(c->get_enodes()[0]);
                 m_used_constraint_vec.push_back(c);
-            } 
+            }
             glpk_wrapper solver(m_box, linear_stack);
             bool result = solver.is_sat();
             if (!result) {
